@@ -1,0 +1,59 @@
+body {
+	background-image: url(https://www.mdbbqservices.com/sites/default/files/barn%20wood1.jpg);
+	/*background-repeat: no-repeat;*/
+	background-size: cover;
+}
+
+#outer {
+	width: 40%;
+	margin: 15px auto 0px;
+}
+
+#dice {
+	margin-left: 2%;
+	width: 10%;
+	float: left;
+}
+#banner {
+	box-shadow: 0.2px 0.2px 0.2px 0.2px #C0C0C0;
+}
+
+#parameters {
+	flex-direction: column;
+	width: 50%;
+	margin: 100px auto 0px;
+	background-color: rgba(224, 224, 224, 0.5);
+	padding: 3% 0% 3% 5%;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px 10px rgba(32, 32, 32, .75);
+}
+
+form {
+	display: inline-block;
+	flex-direction: column;
+	font-family: 'Special Elite', cursive;
+}
+
+button {
+	font-family: 'Special Elite', cursive;
+	padding-top: .4em;
+	font-size: 1em;
+	border-radius: 10px;
+	background-color: white;
+}
+
+.counter {
+	display: inline-block;
+	text-align: center;
+}
+
+p {
+	margin-top: 10px;
+	text-align: right;
+}
+
+#dice2 {
+	margin-right: 2%;
+	width: 10%;
+	text-align: right;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GAME SELECTOR</title>
+	<link rel="stylesheet" type="text/css" href="style/reset.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+	<script src="https://fb.me/react-with-addons-0.13.3.js"></script>
+	<script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+</head>
+<body>
+	<img id="dice" src="/images/dice2.png">
+	<div id="outer">
+		<image id="banner" src="/images/metalplaquetext3.png">
+	</div>	
+
+	<div id="parameters">
+		<form>
+			<label>Number of Players:</label>
+			<div class="counter"></div>
+			<p></p>
+			<label>difficulty/complexity:</label>
+			<div class="counter"></div>
+			<p></p>
+			<label>Average game time:</label>
+			<select>
+				<option> </option>
+				<option>15 mins</option>
+				<option>30 mins</option>
+				<option>45 mins</option>
+				<option>1 hr</option>
+				<option>1 hr 30mins</option>
+				<option>2 hrs</option>
+				<option>3 hrs</option>
+				<option>4 hrs</option>
+				<option>Whole day</option>
+				<option>Multiple days</option>
+			</select>
+			<p></p>
+			<label>Strategy:</label>
+			<div class="counter"></div>
+			<p></p>
+			<label>Cost:</label>
+			<select>
+				<option> </option>
+				<option>$5</option>
+				<option>$10</option>
+				<option>$20</option>
+				<option>$30</option>
+				<option>$40</option>
+				<option>$50</option>
+				<option>$75</option>
+				<option>$100</option>
+				<option>$100+</option>
+			</select>
+			<p></p>
+			<button>Find an Awesome Game
+		</form>
+	</div>
+
+	<p>
+		<img id="dice2" src="/images/dice2.png">
+
+
+	<script type="text/jsx">
+
+		var Choice = React.createClass ({
+			render: function() {
+				return (
+				<select>
+					<option> </option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+				</select>
+				)
+			}
+		})
+
+		React.render(<Choice />, document.getElementsByClassName('counter')[0]);
+		React.render(<Choice />, document.getElementsByClassName('counter')[1]);
+		React.render(<Choice />, document.getElementsByClassName('counter')[2]);
+
+	</script>
+
+</body>
+</html>
