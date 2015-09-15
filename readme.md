@@ -1,3 +1,3 @@
 # GAME SELECTOR
 
-![alt tag](/images/dice2.png)
+![alt tag](http://imgur.com/yExH5Gp)
