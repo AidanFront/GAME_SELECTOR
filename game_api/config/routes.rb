@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
 
-resources :games
+  #Get/put commant    # controller : action
+  get '/result' => 'games#result'
+
+  get '/game/:id' => 'games#info'
+
+  resources :games
+  resources :reviews
 end
