@@ -6,14 +6,14 @@
 	<link rel="stylesheet" type="text/css" href="style/reset.css">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
 	<script src="https://fb.me/react-with-addons-0.13.3.js"></script>
 	<script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
 </head>
 
 <body>
 	<!-- Top left dice -->
-	<a>
+	<a href="dice.html">
 		<img id="dice" src="/images/dice2.png">
 	</a>
 
@@ -25,48 +25,86 @@
 	<!-- Middle form with parameters -->
 	<div id="parameters">
 		<label>Number of Players:</label>
-		<div id="no_of_players" class="counter"></div>
-		<p></p>
+		<div class="counter"></div>
+			<select id="no_of_players">
+				<option> </option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+			</select>
+		<p class="spacer" ></p>
 		<label>difficulty/complexity:</label>
-		<div id="difficulty" class="counter"></div>
-		<p></p>
+		<div class="counter"></div>
+			<select id="difficulty">
+				<option> </option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+			</select>
+		<p class="spacer" ></p>
 		<label>Average game time:</label>
 		<select id='time'>
-			<option> </option>
-			<option>15 mins</option>
-			<option>30 mins</option>
-			<option>45 mins</option>
-			<option>1 hr</option>
-			<option>1 hr 30mins</option>
-			<option>2 hrs</option>
-			<option>3 hrs</option>
-			<option>4 hrs</option>
-			<option>Whole day</option>
-			<option>Multiple days</option>
+			<option value=00:15 > </option>
+			<option value=0:15 >15 mins</option>
+			<option value=0:30 >30 mins</option>
+			<option value=0:45 >45 mins</option>
+			<option value=1:00 >1 hr</option>
+			<option value=1:30 >1 hr 30mins</option>
+			<option value=2:00 >2 hrs</option>
+			<option value=3:00 >3 hrs</option>
+			<option value=8:00 >Whole day</option>
+			<option value=48:00 >Multiple days</option>
 		</select>
-		<p></p>
+		<p class="spacer" ></p>
 		<label>Strategy:</label>
 		<div class="counter"></div>
-		<p></p>
+			<select id="strategy">
+				<option> </option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+			</select>
+		<p class="spacer" ></p>
 		<label>Cost:</label>
-		<select>
-			<option> </option>
-			<option>$5</option>
-			<option>$10</option>
-			<option>$20</option>
-			<option>$30</option>
-			<option>$40</option>
-			<option>$50</option>
-			<option>$75</option>
-			<option>$100</option>
-			<option>$100+</option>
+		<select id="cost">
+			<option value=0 > </option>
+			<option value=5 >$5</option>
+			<option value=10 >$10</option>
+			<option value=20 >$20</option>
+			<option value=30 >$30</option>
+			<option value=40 >$40</option>
+			<option value=50 >$50</option>
+			<option value=75 >$75</option>
+			<option value=100 >$100</option>
+			<option value=110 >$100+</option>
 		</select>
-		<p></p>
+		<p class="spacer" ></p>
 		<button id="find-game-btn">Find an Awesome Game</button>
 	</div>
 
 	<!-- Bottum right dice -->
-	<a id="dice2-tag" href="">
+	<a id="dice2-tag" href="dice.html">
 		<p>
 			<img id="dice2" src="/images/dice2.png">
 		</p>
@@ -104,9 +142,9 @@
 			}
 		})
 
-		React.render(<Choice />, document.getElementsByClassName('counter')[0]);
-		React.render(<Choice />, document.getElementsByClassName('counter')[1]);
-		React.render(<Choice />, document.getElementsByClassName('counter')[2]);
+		// React.render(<Choice />, document.getElementsByClassName('counter')[0]);
+		// React.render(<Choice />, document.getElementsByClassName('counter')[1]);
+		// React.render(<Choice />, document.getElementsByClassName('counter')[2]);
 
 	</script>
 	

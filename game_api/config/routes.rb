@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get '/game/:id' => 'games#info'
 
-  get '/request' => 'games#result'
+  post '/gamesreq' => 'games#gamesreq'
 
   resources :games
   resources :reviews

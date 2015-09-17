@@ -11,6 +11,7 @@ var source = require('vinyl-source-stream');
 var b = watchify(browserify('./app.js'));
 gulp.task('bundle',function() {
   return b.bundle()
+    .on('error', function(err) { console.log('error', err); })
     .pipe(source('bundle.js'))
     .pipe(gulp.dest('build'))
     .pipe( connect.reload() );

@@ -1,0 +1,32 @@
+body {
+	background-image: url(https://www.mdbbqservices.com/sites/default/files/barn%20wood1.jpg);
+	/*background-repeat: no-repeat;*/
+	background-size: cover;
+}
+
+#diepng {
+	float: left;
+
+	margin: 150px auto 0px;
+	width: 50px;
+	height: 50px;
+}
+
+#diegif {
+	float: left;
+	/*background-image: url(https://web2.ph.utexas.edu/~coker2/index.files/04dice.gif);*/
+	background-size: contain;
+	width: 50px;
+	height: 50px;
+	margin: 150px auto 0px;
+}
+
+.hiding {
+	visibility: hidden;
+}
+
+button {
+	border-radius: 5px;
+	margin: 5px;
+	background-color: lightgrey;
+}
