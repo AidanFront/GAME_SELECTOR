@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150916062104) do
+ActiveRecord::Schema.define(version: 20150917045654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20150916062104) do
     t.time     "playtime"
     t.integer  "minplayers"
     t.integer  "maxplayers"
+    t.string   "image"
   end
 
   create_table "reviews", force: :cascade do |t|

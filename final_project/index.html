@@ -6,65 +6,84 @@
 	<link rel="stylesheet" type="text/css" href="style/reset.css">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<script src="https://fb.me/react-with-addons-0.13.3.js"></script>
 	<script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
 </head>
+
 <body>
-	<img id="dice" src="/images/dice2.png">
+	<!-- Top left dice -->
+	<a>
+		<img id="dice" src="/images/dice2.png">
+	</a>
+
+	<!-- Head Banner -->
 	<div id="outer">
 		<image id="banner" src="/images/metalplaquetext3.png">
 	</div>	
 
+	<!-- Middle form with parameters -->
 	<div id="parameters">
-		<form>
-			<label>Number of Players:</label>
-			<div class="counter"></div>
-			<p></p>
-			<label>difficulty/complexity:</label>
-			<div class="counter"></div>
-			<p></p>
-			<label>Average game time:</label>
-			<select>
-				<option> </option>
-				<option>15 mins</option>
-				<option>30 mins</option>
-				<option>45 mins</option>
-				<option>1 hr</option>
-				<option>1 hr 30mins</option>
-				<option>2 hrs</option>
-				<option>3 hrs</option>
-				<option>4 hrs</option>
-				<option>Whole day</option>
-				<option>Multiple days</option>
-			</select>
-			<p></p>
-			<label>Strategy:</label>
-			<div class="counter"></div>
-			<p></p>
-			<label>Cost:</label>
-			<select>
-				<option> </option>
-				<option>$5</option>
-				<option>$10</option>
-				<option>$20</option>
-				<option>$30</option>
-				<option>$40</option>
-				<option>$50</option>
-				<option>$75</option>
-				<option>$100</option>
-				<option>$100+</option>
-			</select>
-			<p></p>
-			<button>Find an Awesome Game
-		</form>
+		<label>Number of Players:</label>
+		<div id="no_of_players" class="counter"></div>
+		<p></p>
+		<label>difficulty/complexity:</label>
+		<div id="difficulty" class="counter"></div>
+		<p></p>
+		<label>Average game time:</label>
+		<select id='time'>
+			<option> </option>
+			<option>15 mins</option>
+			<option>30 mins</option>
+			<option>45 mins</option>
+			<option>1 hr</option>
+			<option>1 hr 30mins</option>
+			<option>2 hrs</option>
+			<option>3 hrs</option>
+			<option>4 hrs</option>
+			<option>Whole day</option>
+			<option>Multiple days</option>
+		</select>
+		<p></p>
+		<label>Strategy:</label>
+		<div class="counter"></div>
+		<p></p>
+		<label>Cost:</label>
+		<select>
+			<option> </option>
+			<option>$5</option>
+			<option>$10</option>
+			<option>$20</option>
+			<option>$30</option>
+			<option>$40</option>
+			<option>$50</option>
+			<option>$75</option>
+			<option>$100</option>
+			<option>$100+</option>
+		</select>
+		<p></p>
+		<button id="find-game-btn">Find an Awesome Game</button>
 	</div>
 
-	<p>
-		<img id="dice2" src="/images/dice2.png">
+	<!-- Bottum right dice -->
+	<a id="dice2-tag" href="">
+		<p>
+			<img id="dice2" src="/images/dice2.png">
+		</p>
+	</a>
 
+	<!-- Sort result box by best result or popularity-->
+	<select>
+		<option>Best Match</option>
+		<option>Most Popular</option>
+	</select>
 
+	<div id="results-box">
+		<!-- Results will be appended here -->
+	</div>
+
+	<!-- React creating <Chioce /> tag -->
 	<script type="text/jsx">
-
 		var Choice = React.createClass ({
 			render: function() {
 				return (
@@ -90,6 +109,8 @@
 		React.render(<Choice />, document.getElementsByClassName('counter')[2]);
 
 	</script>
+	
+	<script type="text/javascript" src="build/bundle.js"></script>
 
 </body>
 </html>

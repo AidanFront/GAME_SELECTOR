@@ -1,5 +1,5 @@
 body {
-	background-image: url(https://www.mdbbqservices.com/sites/default/files/barn%20wood1.jpg);
+	/*background-image: url(https://www.mdbbqservices.com/sites/default/files/barn%20wood1.jpg);*/
 	/*background-repeat: no-repeat;*/
 	background-size: cover;
 }
@@ -21,25 +21,21 @@ body {
 #parameters {
 	flex-direction: column;
 	width: 50%;
-	margin: 100px auto 0px;
+	margin: 50px auto 0px;
 	background-color: rgba(224, 224, 224, 0.5);
 	padding: 3% 0% 3% 5%;
 	border-radius: 10px;
 	box-shadow: 0px 0px 5px 10px rgba(32, 32, 32, .75);
-}
-
-form {
-	display: inline-block;
-	flex-direction: column;
 	font-family: 'Special Elite', cursive;
 }
 
 button {
 	font-family: 'Special Elite', cursive;
 	padding-top: .4em;
-	font-size: 1em;
+	font-size: 0.75em;
 	border-radius: 10px;
-	background-color: white;
+	border: 3px outset #99004C;
+	background-color: #CC0066;
 }
 
 .counter {
@@ -52,8 +48,37 @@ p {
 	text-align: right;
 }
 
+#results-box p {
+	margin-top: 0px;
+	text-align: left;
+}
+
+#results-box {
+	margin: 0 auto;
+	width: 75%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.game-results {
+	margin: 2%;
+	width: 25%;
+	background-color: pink;
+}
+
+
+#parameters button {
+	text-align: center;
+}
+
 #dice2 {
 	margin-right: 2%;
 	width: 10%;
+}
+
+#dice2-tag p {
 	text-align: right;
 }
+
+#results-box
+
+

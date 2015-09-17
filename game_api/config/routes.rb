@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get '/game/:id' => 'games#info'
 
+  get '/request' => 'games#result'
+
   resources :games
   resources :reviews
 end
