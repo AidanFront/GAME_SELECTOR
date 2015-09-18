@@ -20,6 +20,13 @@ class GamesController < ApplicationController
 		@gameresult = @gameresult.where("strategy <= #{@numstrategy}+1")
 		@gameresult = @gameresult.where("cost < #{@numcost}")
 
+		# binding.pry
+		gameresult.each do |item|
+			bestmatch = item.difficulty - @numdifficulty
+			binding.pry
+			bestmatch = item.strategy - @numdifficulty
+		end
+
 		render json: @gameresult
 	end
 

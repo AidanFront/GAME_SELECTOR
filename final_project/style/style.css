@@ -1,7 +1,10 @@
 body {
-	/*background-image: url(https://www.mdbbqservices.com/sites/default/files/barn%20wood1.jpg);*/
-	/*background-repeat: no-repeat;*/
-	background-size: cover;
+	background-image: url(https://www.mdbbqservices.com/sites/default/files/barn%20wood1.jpg);
+	background-repeat: repeat-y;
+	/*border: 3px solid red;*/
+	background-size: 100% 12em;
+	/*background-size: contains;*/
+	/*height: 100em;*/
 }
 
 #outer {

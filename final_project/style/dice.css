@@ -1,28 +1,6 @@
 body {
 	background-image: url(https://www.mdbbqservices.com/sites/default/files/barn%20wood1.jpg);
-	/*background-repeat: no-repeat;*/
 	background-size: cover;
-}
-
-#diepng {
-	float: left;
-
-	margin: 150px auto 0px;
-	width: 50px;
-	height: 50px;
-}
-
-#diegif {
-	float: left;
-	/*background-image: url(https://web2.ph.utexas.edu/~coker2/index.files/04dice.gif);*/
-	background-size: contain;
-	width: 50px;
-	height: 50px;
-	margin: 150px auto 0px;
-}
-
-.hiding {
-	visibility: hidden;
 }
 
 button {
@@ -30,3 +8,57 @@ button {
 	margin: 5px;
 	background-color: lightgrey;
 }
+
+#dice {
+	width:20%;
+	margin: 0 auto;
+	margin-top: 60px;
+	display: flex;
+	justify-content: center;
+}
+
+	#diepng {
+		width: 50px;
+		height: 50px;
+	}
+
+#dice_rolling {
+	display: flex;
+	justify-content: center;
+}
+
+	#diegif {
+		margin-top: 10px;
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+	}
+
+	#dicesquare {
+		margin-top: 13px;
+		margin-left: 3px;
+		width: 30px;
+		height: 30px;
+		border: solid black;
+		border-radius: 5px;
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		background-color: white;
+	}
+		#dicesquare p {
+			margin-top: 1.5px;
+			text-align: center;
+			vertical-align: center;
+			font-family: 'Oswald', sans-serif;
+		}
+
+	.hiding {
+		visibility: hidden;
+	}

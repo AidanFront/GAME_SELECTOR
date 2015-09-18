@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style/reset.css">
 	<link rel="stylesheet" type="text/css" href="style/dice.css">
-	<title>Document</title>
+	<link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+	<title>DICE</title>
 </head>
 <body>
 
@@ -11,22 +13,46 @@
 		<button>Return</button>
 	</a>
 
-	<div id="dice">
-		<a href="">
-			<img id="diepng" src="http://www.bookmarketingmadeeasy.com/wp-content/uploads/2012/10/question_one_white_dice_pc_400_clr-300x300.png">
-		</a>
-		<img id="diegif" src="https://web2.ph.utexas.edu/~coker2/index.files/04dice.gif">
-	</div>
+	<p id="dice">
+		<img id="diepng" src="http://www.bookmarketingmadeeasy.com/wp-content/uploads/2012/10/question_one_white_dice_pc_400_clr-300x300.png">
+	</p>
+	<p id="dice_rolling">
+		<img id="diegif" class="hiding" src="https://web2.ph.utexas.edu/~coker2/index.files/04dice.gif">
+		<div id="dicesquare">
+			<p id="diceroll">?</p>
+		<div>
+	</p>
 
 	<script>
-		var	hidedice = function() {
-			var dice = document.getElementById("diepng");
-			dice.addClass('hidding');
+		var rolldice = function() {
+			setTimeout(function(){
+				roll = Math.floor((Math.random()/(1/6)) + 1)
+				diceroll = document.getElementById("diceroll");
+				dicesquare = document.getElementById("dicesquare");
+				diceroll.innerHTML = roll
+				diceimage_gif.className = "hiding";
+				dicesquare.className = ""
+			}, 3000)
 		}
+
+		var	hidedice = function() {
+			diceimage_png = document.getElementById("diepng");
+			diceimage_gif = document.getElementById("diegif");
+			dicesquare = document.getElementById("dicesquare");
+			// if (diceimage_png.className == "hiding") {
+			// 	diceroll_div.className = "";
+			// 	diceimage_gif.className = "hiding";
+			// } else if (diceimage_png.className !== "hiding") {
+				dicesquare.className = "hiding";
+				diceimage_gif.className = "";
+				rolldice()
+			// }
+		}
+		var dice = document.getElementById("dice");
+			dice.addEventListener("click",function(){
+			    hidedice()
+			  });
 	</script>
-<!-- 
-	var dice = document.getElementById("diepng");
-	document.getElementById("diepng") -->
 
 </body>
 </html>
