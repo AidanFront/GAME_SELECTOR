@@ -29,10 +29,10 @@ $('#find-game-btn').on('click', function() {
           game_result.append($('<p class="strategy gamedetails">').html("strategy:" + results[i].strategy ));
           game_result.append($('<p class="cost gamedetails">').html("Cost:" + results[i].cost ));
           game_result.append($('<p class="popularity gamedetails">').html(results[i].popularity ));
-          // gameimage = results[i].image
+          game_result.append($('<p class="gametime gamedetails">').html("Game Time:" + results[i].gametime));
           game_result.append($('<img class="image gamedetails" src="' + results[i].image + '">'));
-          // game_result.append($('<p class="playtime">').html("Game Time:" + results[i].playtime));
-      	resultbox.append(game_result);
+
+        resultbox.append(game_result);
         // location.reload();
       }
     });

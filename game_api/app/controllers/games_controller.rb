@@ -16,16 +16,16 @@ class GamesController < ApplicationController
 		@gameresult = Game.where("maxplayers >= #{@numplayers}")
 		@gameresult = @gameresult.where("minplayers <= #{@numplayers}") 
 		@gameresult = @gameresult.where("difficulty <= #{@numdifficulty}+1")
-		# @gameresult = @gameresult.where("playtime <= #{@numtime}")
+		@gameresult = @gameresult.where("gametime <= #{@numtime}")
 		@gameresult = @gameresult.where("strategy <= #{@numstrategy}+1")
 		@gameresult = @gameresult.where("cost < #{@numcost}")
 
-		# binding.pry
-		gameresult.each do |item|
-			bestmatch = item.difficulty - @numdifficulty
-			binding.pry
-			bestmatch = item.strategy - @numdifficulty
-		end
+		# @gameresult.each do |item|
+		# 	@bestmatch = (item.difficulty - @numdifficulty.to_i).abs
+		# 	@bestmatch = @bestmatch  + (item.strategy - @numstrategy.to_i).abs
+		# 	# @bestmatch = @bestmatch  + (10 - item.popularity)
+		# 	binding.pry
+		# end
 
 		render json: @gameresult
 	end
