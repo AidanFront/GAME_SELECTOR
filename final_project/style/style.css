@@ -64,8 +64,17 @@ button {
 	width: 10%;
 }
 
-#dice2-tag p {
+#dice2-tag {
 	text-align: right;
+}
+
+#results-line {
+	text-align: center;
+	font-family: 'Special Elite', cursive;
+}
+
+.hiddenYN {
+ 	visibility: hidden;
 }
 
 #results-box {
@@ -74,7 +83,10 @@ button {
 	display: flex;
 	flex-wrap: wrap;
 }
+
+
 .game-results {
+	padding-top: 2px;
 	margin: 2%;
 	width: 25%;
 	background-color: rgba(224, 224, 224, 0.5);
@@ -86,6 +98,7 @@ button {
 	}
 
 	.gamedetails {
+		margin-left: 2px;
 		font-size: 0.5em;
 		font-family: 'Special Elite', cursive;
 	}
@@ -94,8 +107,6 @@ button {
 		visibility: hidden;
 	}
 
-	.gameimage {
 
-	}
 
 
